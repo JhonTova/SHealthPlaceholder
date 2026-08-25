@@ -1,0 +1,8 @@
+name: SHealthPlaceholders
+version: 1.0
+main: me.sirius.shealthplaceholder.SHealthPlaceholders
+api-version: '1.21'
+author: Sirius
+description: Advanced health placeholders with absorption and potion effects support
+depend: [PlaceholderAPI, SiriusCore]
+website: https://github.com/JhonTova

@@ -1,0 +1,142 @@
+# ╔═══════════════════════════════════════════════════════════════╗
+# ║              ✦ SHealthPlaceholders Config ✦                  ║
+# ║              by Sirius | GitHub: JhonTova                     ║
+# ╚═══════════════════════════════════════════════════════════════╝
+
+# ═══════════════════════════════════════════════════════════════
+#                       PLACEHOLDERS DISPONIBLES
+# ═══════════════════════════════════════════════════════════════
+#
+# %shealth_health_basic%
+#   Formato: NÚMERO ❤ [NÚMERO ❤]
+#   Ejemplo: 20 ❤ 4 ❤
+#   Descripción: Muestra vida y absorción con corazón rojo/amarillo
+#
+# %shealth_health_colored%
+#   Formato: NÚMERO ❤ [NÚMERO ❤]
+#   Ejemplo: 20 ❤ 4 ❤
+#   Descripción: El corazón cambia de color según efectos activos
+#   - Negro si tiene Wither
+#   - Verde si tiene Poison
+#   - Morado si tiene ambos
+#
+# %shealth_health_effects%
+#   Formato: NÚMERO ❤ [NÚMERO ❤] SÍMBOLOS
+#   Ejemplo: 20 ❤ ☠ ⚗ +
+#   Descripción: Muestra vida, absorción y símbolos de efectos activos
+#
+# %shealth_rompepitas%
+#   Formato: NÚMERO ❤ [NÚMERO ❤]
+#   Ejemplo: 2 ❤ o 1.5 ❤
+#   Descripción: Formato especial - redondea hacia arriba excepto 
+#                cuando la vida es menor a 2 (muestra decimales)
+#
+# %shealth_effects_only%
+#   Formato: SÍMBOLOS
+#   Ejemplo: ☠ ⚗ +
+#   Descripción: Solo muestra los símbolos de efectos activos
+#
+# %shealth_health%
+#   Formato: NÚMERO
+#   Ejemplo: 20 o 19.5
+#   Descripción: Vida actual con decimales si es necesario
+#
+# %shealth_health_int%
+#   Formato: NÚMERO
+#   Ejemplo: 20
+#   Descripción: Vida actual redondeada hacia arriba (entero)
+#
+# %shealth_max_health%
+#   Formato: NÚMERO
+#   Ejemplo: 20 o 40
+#   Descripción: Vida máxima con decimales si es necesario
+#
+# %shealth_max_health_int%
+#   Formato: NÚMERO
+#   Ejemplo: 20
+#   Descripción: Vida máxima redondeada hacia arriba (entero)
+#
+# %shealth_absorption%
+#   Formato: NÚMERO
+#   Ejemplo: 4 o 2.5
+#   Descripción: Absorción actual con decimales si es necesario
+#
+# %shealth_absorption_int%
+#   Formato: NÚMERO
+#   Ejemplo: 4
+#   Descripción: Absorción actual redondeada hacia arriba (entero)
+#
+# %shealth_health_percentage%
+#   Formato: NÚMERO
+#   Ejemplo: 75.0
+#   Descripción: Porcentaje de vida (vida/vidaMaxima * 100)
+#
+# %shealth_hearts_count%
+#   Formato: NÚMERO
+#   Ejemplo: 10
+#   Descripción: Cantidad de corazones (vida/2)
+#
+# %shealth_total_hearts_count%
+#   Formato: NÚMERO
+#   Ejemplo: 12
+#   Descripción: Total de corazones incluyendo absorción ((vida+absorción)/2)
+#
+symbols:
+  # Símbolo del corazón que aparece junto a la vida
+  heart: "❤"
+
+# Códigos de color: &0-9, &a-f
+# &c = Rojo, &e = Amarillo, &a = Verde, &8 = Gris oscuro, &5 = Morado
+colors:
+  # Color del corazón de vida normal
+  heart: "&c"
+  
+  # Color del corazón de absorción
+  absorption: "&e"
+  
+  # Color del corazón cuando tienes efecto Wither
+  wither-heart: "&8"
+  
+  # Color del corazón cuando tienes efecto Poison
+  poison-heart: "&a"
+  
+  # Color del corazón cuando tienes Wither + Poison
+  multiple-effects: "&5"
+  
+  # Color del NÚMERO de vida
+  health-number: "&f"
+  
+  # Color del NÚMERO de absorción 
+  absorption-number: "&f"
+
+effect-symbols:
+  wither: "☠"           # Wither
+  poison: "⚗"           # Veneno
+  regeneration: "+"     # Regeneración
+  strength: "⚔"         # Fuerza
+  weakness: "↓"         # Debilidad
+  speed: "➤"            # Velocidad
+  slowness: "◆"         # Lentitud
+  resistance: "◈"       # Resistencia
+  fire_resistance: "♨"  # Resistencia al fuego
+  instant_damage: "⚡"   # Daño instantáneo
+  invisibility: "◯"     # Invisibilidad
+  blindness: "◉"        # Ceguera
+  glowing: "✦"          # Resplandor
+  levitation: "↑"       # Levitación
+
+effect-colors:
+  wither: "&8"          # Gris oscuro
+  poison: "&a"          # Verde
+  regeneration: "&d"    # Rosa
+  strength: "&c"        # Rojo
+  weakness: "&7"        # Gris
+  speed: "&b"           # Cian
+  slowness: "&9"        # Azul oscuro
+  resistance: "&6"      # Dorado
+  fire_resistance: "&6" # Dorado
+  instant_damage: "&4"  # Rojo oscuro
+  invisibility: "&7"    # Gris
+  blindness: "&8"       # Gris oscuro
+  glowing: "&e"         # Amarillo
+  levitation: "&f"      # Blanco
